@@ -56,7 +56,7 @@ hof.500 <- hof[hof$HR>=500,]
 hof.500 <- hof.500[order(hof.500$OPS),]
 dotchart(hof.500$OPS,labels=hof.500$X,xlab="OPS")
 
-##  3.5 Numeric Variable: Stripchar and Histogram.  
+##  3.5 Numeric Variable: Stripchart and Histogram.  
 
 x11(width=7,height=3.5)
 stripchart(hof$MidCareer, method="jitter",pch=1,xlab="Mid Career")
@@ -73,7 +73,7 @@ with(hof, plot(MidCareer,OPS))
 with(hof, lines(lowess(MidCareer,OPS,f=.3)))
 with(hof,identify(MidCareer,OPS,X,n=4))
 
-##  Bulding a graph, step-by-step.  
+##  3.6.2 Bulding a graph, step-by-step.  
 
 x11()
 with(hof, plot(OBP, SLG))
